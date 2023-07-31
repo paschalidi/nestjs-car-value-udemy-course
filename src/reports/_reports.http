@@ -1,0 +1,26 @@
+### add new report
+POST http://localhost:3000/reports
+Content-Type: application/json
+
+{
+  "price": 20000,
+  "make": "ford",
+  "model": "mustang",
+  "year": 1982,
+  "mileage": 50000,
+  "lng": 45,
+  "lat": 45
+}
+
+
+### update approval of report
+PATCH http://localhost:3000/reports/9
+Content-Type: application/json
+
+{
+  "approved": true
+}
+
+
+### get estimate
+GET http://localhost:3000/reports?year=1982&lng=46&lat=47&make=ford&model=mustang&mileage=50000
